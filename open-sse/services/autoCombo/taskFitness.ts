@@ -58,6 +58,35 @@ const FITNESS_TABLE: Record<string, Record<string, number>> = {
     // MiniMax M2.5 — reasoning support helps complex code
     "minimax-m2.5": 0.75,
     "minimax-m2": 0.72,
+    // Current-generation additions, sourced from this instance's own live
+    // `model_intelligence` arena_elo sync (`coding` category, 2026-08-11
+    // snapshot) rather than guessed — the resolution chain already prefers
+    // that table when a matching row exists, so these are a same-scale
+    // approximation for when it doesn't (a stale sync, disabled flag, or a
+    // model id variant the sync hasn't captured). Longer patterns are
+    // checked first (`getStaticFitnessTableScore`), so these correctly
+    // shadow the older, un-versioned "claude-opus"/"claude-sonnet"/"qwen"/
+    // "kimi-k2"/"glm-5"/"codex" rows above for ids that match both.
+    "claude-opus-5": 0.92,
+    "claude-sonnet-5": 0.64,
+    "claude-fable-5": 0.84,
+    "gpt-5.6": 0.59,
+    "gpt-5.5": 0.51,
+    "gemini-3.6": 0.63,
+    "gemini-3.5": 0.56,
+    "gemini-3.1": 0.42,
+    "gemini-3": 0.4,
+    "qwen3.8-max": 0.93,
+    "qwen3.7-max": 0.58,
+    "qwen3.6": 0.5,
+    "deepseek-v4-flash": 0.74,
+    "deepseek-v4-pro": 0.46,
+    "kimi-k3": 0.94,
+    "kimi-k2.7": 0.49,
+    "kimi-k2.6": 0.57,
+    "glm-5.2": 0.74,
+    "minimax-m3": 0.52,
+    "mimo-v2.5": 0.49,
   },
   review: {
     "claude-sonnet": 0.92,
